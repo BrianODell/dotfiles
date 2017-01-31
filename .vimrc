@@ -1,9 +1,18 @@
-execute pathogen#infect()
 set ts=4 sw=4 et hidden
 syn on
 set number
 set clipboard=unnamed
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+let g:session_autosave = 'no'
+
+call plug#begin('~/.vim/plugged')
+"Plug 'Valloric/MatchTagAlways'
+Plug 'moll/vim-node'
+Plug 'nvie/vim-flake8'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-vinegar'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
+call plug#end()
+
